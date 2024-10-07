@@ -1,0 +1,11 @@
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+
+INSERT INTO Departments (DepartmentID, DepartmentName)
+VALUES (1, 'IT'), (2, 'HR'), (3, 'Finance');
+
+SELECT Employees.FirstName, Employees.LastName, Departments.DepartmentName
+FROM Employees
+INNER JOIN Departments ON Employees.Department = Departments.DepartmentName;
